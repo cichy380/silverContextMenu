@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <title>Silver Context Menu</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+</head>
+<body>
+<!--[if lt IE 8]>
+  <div class="alert alert-warning">
+    You are using an <strong>outdated</strong> browser. Please 
+    <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+  </div>
+<![endif]-->
+    <header class="banner navbar navbar-default navbar-static-top" role="banner">
+        <div class="container">
+            <nav class="collapse navbar-collapse pull-right" role="navigation">
+                <ul class="nav navbar-nav">
+                    <li role="presentation" class="active"><a href="#">Example</a></li>
+                    <li role="presentation"><a href="https://github.com/silversite">Github</a></li>
+                </ul>
+            </nav>
+            <h4 class="text-muted">Example of plugin using <small>simply HTML template</small></h4>
+        </div>
+    </header>
+  
+    <div class="wrap container" role="document">
+        <div class="content row">
+            <main class="main col-sm-12" role="main">
+                <div class="jumbotron">
+                    <h1>Silver Context Menu</h1>
+                    <p class="lead">
+                        This gray area is called Jumbotron and it has active Silver Context Menu plugin. It means that if
+                        you click here right button of your mouse you can see custom Context Menu. You can try now!
+                    </p>
+                    <p><a class="btn btn-lg btn-danger plugin-destroy" href="#" role="button">Destroy plugin</a></p>
+                </div>
+
+                <div class="row marketing">
+                    <div class="col-lg-6">
+                        <h4>Subheading</h4>
+                        <p>
+                            Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum. Lorem
+                            ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis.
+                            Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie
+                            a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim.
+                            Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet.
+                        </p>
+                        <h4>Subheading</h4>
+                        <p>
+                            Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus
+                            sit amet fermentum. Vestibulum dapibus, mauris nec malesuada fames ac turpis velit, rhoncus
+                            eu, luctus et interdum adipiscing wisi.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <h4>Subheading</h4>
+                            <p>
+                                Nulla ipsum dolor lacus, suscipit adipiscing. Cum sociis natoque penatibus et ultrices
+                                volutpat. Nullam wisi ultricies a, gravida vitae, dapibus risus ante sodales lectus
+                                blandit eu, tempor diam pede cursus vitae, ultricies eu, faucibus quis, porttitor eros
+                                cursus lectus, pellentesque eget, bibendum a, gravida ullamcorper quam. Nullam viverra
+                                consectetuer.
+                            </p>
+                        <h4>Subheading</h4>
+                        <p>
+                            Aliquam sem. In hendrerit nulla quam nunc, accumsan congue. Lorem ipsum primis in nibh vel
+                            risus. Sed vel lectus. Ut sagittis, ipsum dolor quam.
+                        </p>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+  
+    <footer class="content-info">
+        <div class="container">
+            <hr>
+            <small>&copy; Silversite.pl 2017</small>
+            <hr>
+        </div>
+    </footer>
+
+    <ul class="dropdown-menu" id="menuid">
+        <li><a href="#1">First option</a></li>
+        <li><a href="#2">Second option</a></li>
+        <li><a href="#3">Third option</a></li>
+    </ul>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="../src/jquery.silver.contextMenu.js"></script>
+    <script>
+        // plugin activation
+        $('.jumbotron').silverContextMenu({
+            menuSelector: '#menuid' // required
+        });
+
+        $('.plugin-destroy').on('click', function() {
+            $('.jumbotron').silverContextMenu('destroy');
+        });
+    </script>
+</body>
+</html>
