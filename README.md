@@ -2,7 +2,7 @@
 
 It is very simply [jQuery](https://jquery.com/) plugin based on example from ["jQuery in Action, Third Edition" book](http://manning.com/books/jquery-in-action-third-edition).
 
-* Demo: [http://templates.silversite.pl/silver-context-menu/](http://templates.silversite.pl/silver-context-menu/)
+* Demo: [http://example.silversite.pl/silver-context-menu/](http://example.silversite.pl/silver-context-menu/)
 
 ## Quick start
 
