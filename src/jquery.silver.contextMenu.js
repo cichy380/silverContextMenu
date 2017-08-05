@@ -54,7 +54,7 @@
             });
 
             // mouse click event on any webiste element except the ContextMenu - close ContextMenu
-            $('html').on('click.' + namespace, function(event) {
+            $(document.body).on('click.' + namespace, function(event) {
                 if ($(event.target).closest($menu).length === 0) { // clicked outside $menu
                     $menu.hide();
                 }
@@ -73,7 +73,7 @@
                     $(options.menuSelector).hide();
                 })
                 .removeData(namespace)
-                .add('html').off('.' + namespace); // destroy all plugin events
+                .add(document.body).off('.' + namespace); // destroy all plugin events
 
             return this; // jQuery Method Chaining
         }
