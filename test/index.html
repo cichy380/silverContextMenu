@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <title>Silver Context Menu</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="//code.jquery.com/qunit/qunit-2.4.0.css">
+    <style>
+        .dropdown-menu {display: none; }
+    </style>
+</head>
+<body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+
+    <ul class="dropdown-menu" id="menuid">
+        <li><a href="#1">First option</a></li>
+        <li><a href="#2">Second option</a></li>
+        <li><a href="#3">Third option</a></li>
+    </ul>
+
+    <script src="//code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+            crossorigin="anonymous"></script>
+    <script src="//code.jquery.com/qunit/qunit-2.4.0.js"></script>
+    <script src="../src/jquery.silver.contextMenu.js"></script>
+    <script src="test.js"></script>
+</body>
+</html>
