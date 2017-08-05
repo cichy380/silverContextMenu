@@ -27,17 +27,17 @@
 
             // check if required options are configured
             if (!options.menuSelector) {
-                $.error('Required option "menuSelector" was not configured.')
+                $.error('No menu specified.')
             }
 
             // check if menu was found
             if ($menu.length === 0) {
-                $.error('Menu element was not found.')
+                $.error('The menu specified does not exist.')
             }
 
             // check if plugin was not initialized before on this element
             if (this.filter(function() {return $(this).data(namespace);}).length !== 0) {
-                $.error('Test-01 is already initialized.')
+                $.error('The plugin has already been initialized.')
             }
             this.data(namespace, options);
 
@@ -94,7 +94,7 @@
             $.error('Method name or/and configuration object is required.')
         }
         else {
-            $.error('Method ' + method + ' does not exists.')
+            $.error('Method ' + method + ' does not exist.')
         }
     };
 
