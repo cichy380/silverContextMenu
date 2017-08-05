@@ -82,13 +82,13 @@
     // definition of plugin
     $.fn.silverContextMenu = function(method) {
         if ($.type(method) === 'string' && methods[method]) {
-            methods[method].apply(
+            return methods[method].apply(
                 this,
                 Array.prototype.slice.call(arguments, 1)
             );
         }
         else if ($.type(method) === 'object') { // got object with configuration - init() method start
-            methods.init.apply(this, arguments);
+            return methods.init.apply(this, arguments);
         }
         else if (method === undefined) { // got nothing
             $.error('Method name or/and configuration object is required.')
